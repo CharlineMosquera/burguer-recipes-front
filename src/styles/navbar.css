@@ -1,0 +1,94 @@
+.navbar {
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro y ligeramente transparente */
+    color: white; /* Texto blanco para contraste */
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    /* z-index: 10; */
+    border-bottom: 2px solid #ffcc00; /* Borde amarillo que evoca comida rápida */
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-links {
+    padding-right: 2%;
+    transition: all 0.3s ease-in-out; /* Transición suave */
+}
+
+.navbar a:hover {
+    color: #ffcc00; /* Amarillo brillante para resaltar los enlaces */
+    transform: scale(1.1); /* Efecto de escala al pasar el mouse */
+}
+
+.navbar a:active {
+    color: #e6b800; /* Un tono amarillo un poco más oscuro cuando el enlace es clickeado */
+}
+
+/* Icono de menú hamburguesa */
+.menu-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Estilo para el texto Recetas Rápidas */
+.navbar-brand {
+    font-size: 2rem; /* Aumenta el tamaño del texto */
+    font-weight: bold; /* Hace el texto más grueso */
+    color: #ffcc00; /* Color amarillo para destacar */
+    text-transform: uppercase; /* Hace el texto en mayúsculas */
+    letter-spacing: 2px; /* Espaciado entre las letras para mayor impacto */
+    font-family: 'Lobster', cursive; /* Usar una tipografía llamativa (puedes cambiarla) */
+    transition: color 0.3s ease, transform 0.3s ease; /* Transición suave para hover */
+}
+
+/* Efecto hover en el texto */
+.navbar-brand:hover {
+    color: #ff9900; /* Amarillo más oscuro al pasar el ratón */
+    transform: scale(1.1); /* Agrandar ligeramente el texto cuando se pasa el ratón */
+}
+
+
+/* Para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar a {
+        margin: 10px 0; /* Espaciado en vertical */
+    }
+
+    .navbar a:hover {
+        transform: none; /* No aplicar el hover de escala en pantallas pequeñas */
+    }
+
+    /* Mostrar el icono de menú hamburguesa en móviles */
+    .menu-icon {
+        display: block;
+    }
+
+    .navbar-links {
+        display: none; /* Escondemos los enlaces por defecto en pantallas pequeñas */
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links.active {
+        display: flex; /* Cuando el menú está activo, lo mostramos */
+    }
+}

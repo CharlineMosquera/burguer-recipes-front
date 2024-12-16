@@ -1,0 +1,50 @@
+form {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    margin-top: 20vh;
+}
+
+form input, form textarea, form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #d32f2f;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 68, 0, 0.5);
+}
+
+form button {
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #940e0e;
+}
+
+form textarea {
+    resize: none;
+    height: 80px;
+}
+
+form h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #d32f2f;
+}

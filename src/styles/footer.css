@@ -1,0 +1,31 @@
+.footer {
+    background-image: url('../assets/img/papas-fritas-sinfondo.png');
+    background-repeat: repeat-x; /* Repetir solo en el eje X */
+    background-size: 100px auto; /* Ajustar tamaño de la imagen */
+    background-position: bottom center; /* Alinea las papas al fondo */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px; /* Ajusta la altura según lo necesario */
+    z-index: 1; /* Asegura que el footer esté por debajo del texto */
+}
+
+.footer-content {
+    position: relative;
+    z-index: 2; /* Asegura que el texto esté por encima de las papas */
+    color: white;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 35px;
+    
+}
+
+.footer p {
+    margin: 0;
+    font-size: 1.2rem; /* Ajusta el tamaño del texto */
+    z-index: 3; /* Asegura que el texto se vea encima */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra para mayor legibilidad */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+}

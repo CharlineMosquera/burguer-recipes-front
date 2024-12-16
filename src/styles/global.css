@@ -1,0 +1,43 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: "Arial", sans-serif;
+    background-color: #f9f9f9;
+    background-image: url("../assets/img/bg2.avif");
+    color: #333;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+    color: #d32f2f; /* Un rojo navideño */
+}
+
+p {
+    margin: 0.5rem 0;
+}
+
+a {
+    text-decoration: none;
+    color: #d32f2f;
+}
+
+/* Home and Lists */
+.home,
+.users-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+/* Utility Classes */
+.center {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
