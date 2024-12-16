@@ -1,59 +1,60 @@
-.users-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+/* General container styling */
+.users-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
     padding: 20px;
+    border-radius: 8px;
     margin-top: 20vh;
 }
 
-.user-card {
-    background-color: #fff;
-    border: 1px solid #e0e0e0;
+/* Styling for individual user cards */
+.users-card > div {
+    flex: 1 1 calc(300px - 16px); /* Adaptable en pantallas */
+    max-width: 300px;
+    background-color: #292b3f; /* Fondo de tarjeta ligeramente más claro */
+    color: #fff; /* Texto claro para contraste */
+    border: 1px solid #444; /* Línea sutil alrededor */
     border-radius: 8px;
-    padding: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s, box-shadow 0.2s;
-    text-align: center;
-    font-family: "Arial", sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.user-card:hover {
+/* Hover effect for user cards */
+.users-card > div:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-.user-card h3 {
+/* General card content styling */
+.users-card > div .card-content {
+    padding: 16px;
+    font-size: 16px;
+}
+
+/* Styling for username */
+.users-card > div .card-content .username {
     font-size: 18px;
-    margin: 10px 0;
-    color: #333;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #ffd700; /* Amarillo dorado para destacar */
 }
 
-.user-card p {
+/* Styling for email */
+.users-card > div .card-content .email {
     font-size: 14px;
-    color: #555;
-    margin: 5px 0;
+    color: #ccc; /* Gris claro */
 }
 
-.user-card .email {
-    font-style: italic;
-    color: #007bff;
-}
-
-.user-card .actions {
-    margin-top: 15px;
-}
-
-.user-card .actions button {
-    padding: 8px 12px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 14px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.user-card .actions button:hover {
-    background-color: #0056b3;
+/* Responsive Design */
+@media (max-width: 768px) {
+    .users-card {
+        flex-direction: column;
+        align-items: center;
+    }
+    .users-card > div {
+        flex: 1 1 100%;
+    }
 }

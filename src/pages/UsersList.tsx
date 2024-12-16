@@ -1,22 +1,24 @@
 import React from "react";
-import "../styles/userCards.css";
+import UserCard from "../components/UserCard";
+import useFetchUsers from "../hooks/useFetchUsers";
+import "../styles/userCards.css"
 
-interface UserCardProps {
-    username: string;
-    email: string;
-}
+const UsersList: React.FC = () => {
+    const { users, loading } = useFetchUsers();
 
-const UserCard: React.FC<UserCardProps> = ({ username, email }) => {
+    if (loading) return <p>Loading users...</p>;
+
     return (
-        <div className="user-card">
-            <h3>{username}</h3>
-            <p className="email">{email}</p>
-            <div className="actions">
-                <button>Ver Perfil</button>
-                <button>Eliminar</button>
-            </div>
+        <div className="users-card">
+            {users.map((user: any) => (
+                <UserCard
+                    key={user._id}
+                    username={user.username}
+                    email={user.email}
+                />
+            ))}
         </div>
     );
 };
 
-export default UserCard;
+export default UsersList;
